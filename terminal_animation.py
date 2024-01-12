@@ -12,11 +12,13 @@ playsound.playsound('Miley_Cyrus_Wrecking_Ball.mp3', False)
 startTime = time.time()
 previous = lyrics.frames[str(0.0)]
 
+
 def printLyricLine(time):
     global previous
+
     try:
-        previous = lyrics.frames[str(time)]
-        print(lyrics.frames[str(time)])
+        previous = lyrics.frames[str(time)+'.0']
+        print(lyrics.frames[str(time)+'.0'])
     except:
         print(previous)
     
@@ -34,14 +36,14 @@ def animate(frames, duration, cycles):
         count = count + 1
 
 
-time.sleep(8.5)
-animate(faceMimeing.frames, 0.3, 16)
+# time.sleep(8.5)
+animate(faceMimeing.frames, 0.3, 19)
 animate(wreckingball.frames, 0.15, 5)
 animate([wreckingball.frames[22]], 0.3, 7)
 animate(hammerSkeletonSinging.frames, 0.5, 30 )
 animate(wreckingball.frames, 0.15, 10)
-animate(hammerSkeletonSinging.frames, 0.5, 31 )
-animate(faceMimeing.frames, 0.3, 5)
+animate(hammerSkeletonSinging.frames, 0.5, 30 )
+animate(faceMimeing.frames, 0.3, 4)
 animate(wreckingball.frames, 0.15, 13)
 animate([wreckingball.frames[22]], 0.3, 100)
 
